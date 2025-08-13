@@ -23,22 +23,22 @@ Java 17 • Maven • Gson • JUnit 5
 ```bash
 mvn -q clean package
 mvn -q exec:java
+
 🖥️ Usage
 mathematica
 Copy
 Edit
 1) Create account  2) Deposit  3) Withdraw  4) Transfer
 5) List accounts   6) Save     7) Load      0) Exit
+
 ✅ Tests
 bash
 Copy
 Edit
 mvn -q test
+
 🗺️ Roadmap
 Input validation & nicer prompts
-
 JavaFX GUI (optional)
-
 SQLite/H2 persistence
-
 GitHub Actions CI
