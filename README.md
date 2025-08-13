@@ -1,5 +1,6 @@
 # Java Banking App
 
+[![CI](https://github.com/Wayrier/java-banking-app/actions/workflows/maven.yml/badge.svg)](https://github.com/Wayrier/java-banking-app/actions/workflows/maven.yml)
 ![Java](https://img.shields.io/badge/Java-17-orange)
 ![Maven](https://img.shields.io/badge/Build-Maven-informational)
 ![Tests](https://img.shields.io/badge/Tests-JUnit%205-blue)
