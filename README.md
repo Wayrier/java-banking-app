@@ -6,39 +6,72 @@
 ![Tests](https://img.shields.io/badge/Tests-JUnit%205-blue)
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow)
 
-A compact Java project that demonstrates **OOP**, basic banking logic, **JSON** persistence (Gson), and a **CLI** menu.  
-Great as a Praktikum-ready portfolio project.
+A compact Java CLI application that demonstrates object-oriented design, banking logic, JSON persistence, and automated tests. The app is intentionally small, so the project can be reviewed quickly as part of a portfolio or internship application.
 
-## ✨ Features
-- Create accounts (UUID)
-- Deposit / Withdraw (validation)
-- Transfer between accounts
-- Transaction history per account
-- Save/Load data to `bank.json`
+## Features
 
-## 🧱 Tech
-Java 17 • Maven • Gson • JUnit 5
+- Create bank accounts with unique IDs
+- Deposit and withdraw money with validation
+- Transfer money between accounts
+- Store transaction history per account
+- Save and load account data from `bank.json`
+- Run automated tests with JUnit 5
 
-## 🚀 Run locally
+## Tech Stack
+
+- Java 17
+- Maven
+- Gson for JSON persistence
+- JUnit 5 for tests
+- GitHub Actions for CI
+
+## Project Structure
+
+```text
+.
+|-- pom.xml
+|-- src/main/java/com/wayrier/bank/
+|   |-- Main.java
+|   |-- io/JsonStore.java
+|   |-- model/Account.java
+|   |-- model/Transaction.java
+|   `-- service/BankService.java
+|-- src/test/java/com/wayrier/bank/
+|   `-- BankServiceTest.java
+`-- .github/workflows/maven.yml
+```
+
+## Run Locally
+
+Requirements:
+
+- Java 17+
+- Maven 3.9+
+
 ```bash
 mvn -q clean package
 mvn -q exec:java
+```
 
-🖥️ Usage
-mathematica
-Copy
-Edit
+The CLI menu provides the main workflow:
+
+```text
 1) Create account  2) Deposit  3) Withdraw  4) Transfer
 5) List accounts   6) Save     7) Load      0) Exit
+```
 
-✅ Tests
-bash
-Copy
-Edit
+## Tests
+
+```bash
 mvn -q test
+```
 
-🗺️ Roadmap
-Input validation & nicer prompts
-JavaFX GUI (optional)
-SQLite/H2 persistence
-GitHub Actions CI
+The GitHub Actions workflow also runs `mvn -B -q clean verify` on push and pull requests.
+
+## Roadmap
+
+- Improve CLI prompts and input handling
+- Add more unit tests for edge cases
+- Add monthly statements or interest calculation
+- Add SQLite or H2 persistence as an alternative to JSON
+- Optional: build a simple JavaFX dashboard
